@@ -1,4 +1,4 @@
-package hammurabi;
+package com.hamurabi;
 
 import static org.junit.Assert.*;
 
@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class HammurabiTest {
     
-    Hammurabi ham;
+    Hamurabi ham;
     
     boolean about(double expected, double actual) {
         return actual > 0.90 * expected && actual < 1.10 * expected;
@@ -15,7 +15,7 @@ public class HammurabiTest {
 
     @Before
     public void setUp() throws Exception {
-        ham = new Hammurabi();
+        ham = new Hamurabi();
     }
 
     @Test
