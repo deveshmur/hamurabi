@@ -237,3 +237,41 @@ public class Hamurabi {
     }
 
 
+
+    void printSummary(int yearNumber, int starvedLastYear, int immigrantsLastYear, int populationNow,
+                      int harvestBushels, int ratsAte, int bushelsInStorage, int acresOwned, int landPrice) {
+
+        System.out.println();
+        System.out.println("O great Hammurabi!");
+        System.out.println("You are in year " + year + " of your total 10 years.");
+        System.out.println("In the previous year " + starvedLastYear + " people starved to death.");
+        System.out.println("In the previous year " + immigrantsLastYear + " new people entered the kingdom.");
+        System.out.println("The population is now " + populationNow + ".");
+        System.out.println("We harvested " + harvestBushels + " bushels at bushels per acre."); 
+        System.out.println("Rats destroyed " + ratsAte + " bushels, leaving " + bushelsInStorage + " bushels in storage.");
+        System.out.println("The city owns " + acresOwned + " acres of land.");
+        System.out.println("Land is currently worth " + landPrice + " bushels per acre.");
+        System.out.println();
+    }
+
+    void finalSummary(int lastYear, int totalStarved, int finalPopulation, int finalAcres) {
+        System.out.println();
+        System.out.println("Final summary after year " + lastYear + ":");
+        System.out.println("People starved in total: " + totalStarved);
+        System.out.println("Final population: " + finalPopulation);
+        System.out.println("Final acres: " + finalAcres);
+        if (finalPopulation > 0) {
+            int acresPerPerson = finalAcres / finalPopulation;
+            System.out.println("Acres per person: " + acresPerPerson);
+            if (totalStarved > (finalPopulation / 2)) {
+                System.out.println("Your people hate you. You did a terrible job.");
+            } else if (acresPerPerson < 7) {
+                System.out.println("Your reign was poor but survivable.");
+            } else {
+                System.out.println("Your reign was successfu. Your people love you!");
+            }
+        } else {
+            System.out.println("All your people are gone. You failed.");
+        }
+    }
+}
